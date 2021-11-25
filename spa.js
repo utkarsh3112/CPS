@@ -25,11 +25,10 @@ xhr.onload = function () {
                 element.content=element.content+".";
             }
             if(element.urlToImage==null){
-                index--;
                 continue;
             }
             index++;
-            let news=`<div class="accordion-item"><h2 class="accordion-header" id="heading${index}"> <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}"><strong>Breaking News ${index}: &nbsp </strong>${element.title}</button></h2><div id="collapse${index}" class="accordion-collapse collapse collapsed" aria-labelledby="heading${index}" data-bs-parent="#accordionExample"><div class="accordion-body"><div class="img-container"><img src=${element.urlToImage} id="image_incident"></div><div class="text-container"><p><h4>${element.description}</h4></p>${element.content}<br><a href=${element.url} target="_blank">Read more here</a></div></div></div></div>`;
+            let news=`<div class="accordion-item"><h2 class="accordion-header" id="heading${index}"> <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}"><span id="hide"><strong>Breaking News </span>${index}: &nbsp </strong>${element.title}</button></h2><div id="collapse${index}" class="accordion-collapse collapse collapsed" aria-labelledby="heading${index}" data-bs-parent="#accordionExample"><div class="accordion-body"><div class="img-container"><img src=${element.urlToImage} id="image_incident"></div><div class="text-container"><p><h4>${element.description}</h4></p>${element.content}<br><a href=${element.url} target="_blank">Read more here</a></div></div></div></div>`;
             newsHtml+=news;
         }       
         newsAccordian.innerHTML=newsHtml;

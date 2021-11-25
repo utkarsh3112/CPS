@@ -11,7 +11,6 @@ temp.recovered = d.recovered;
 temp.active = d.active;
 values[d.countryInfo.iso2] = temp;
 });
-
 //Now rendering the map
 new svgMap({
 targetElementID: "svgMap",

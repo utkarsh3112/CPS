@@ -9,35 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
     <title>Weather For You</title>
-    <link rel = "icon" href = "let_icon.png"
-        type = "image/x-icon">
-        <link
-      href="https://cdn.jsdelivr.net/gh/StephanWagner/svgMap@v2.6.0/dist/svgMap.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      .img-container{
-        width: 40%;
-      }
-      
-      #image_incident{
-        width: 100%;
-      }
-      .accordion-body{
-        display: flex;
-        justify-content: space-between;
-      }
-      .text-container{
-        width: 50%;
-        padding: 0.2rem;
-      }
-      .rm-margin{
-        margin-top: 1rem;
-      }
-      #m1,#m2{
-        padding-top: 70px;
-      }
-    </style>
+    <link rel = "icon" href = "let_icon.png" type = "image/x-icon">
+    <link href="https://cdn.jsdelivr.net/gh/StephanWagner/svgMap@v2.6.0/dist/svgMap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="app.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
@@ -50,7 +24,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
           <ul class="navbar-nav ">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="spa.html">Get Started</a>
+              <a class="nav-link active" aria-current="page" href="#m0">Get Started</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" id="news" href="#m2">News</a>
@@ -62,7 +36,24 @@
       </div>
       </div>
     </nav>
-    
+    <div id="m0">
+      <div class="input">
+        <input type="text" value="Gwalior" placeholder="Enter the city" class="input_text">
+        <input type="submit" value="Submit" class="submit" onclick="weatherData()">
+      </div>
+  
+      <div class="container">
+        <div class="card">
+          <h4 class="name" id="name" style="width: 100%;text-align: center;"></h4>
+          <p class="sign"></p>
+          <p class="temp"></p>
+          <p class="clouds"></p>          
+          <p class="humidity"></p>
+          <p class="sun"></p>
+          <p class="desc"></p>
+        </div>
+      </div>
+    </div>
     <div id="m1"><div class="container my-3"><h3>Covid Update <span class="badge bg-secondary">By Weather For You</span></h3>
       <hr><div id="svgMap"></div></div></div>
     
@@ -73,12 +64,13 @@
         
       </div>
     </div>
-
+    
+  
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script src="spa.js"></script>
     <script src="main.js"></script>
-    <script src="click.js"></script>
+    <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/StephanWagner/svgMap@v2.6.0/dist/svgMap.min.js"></script>
     
