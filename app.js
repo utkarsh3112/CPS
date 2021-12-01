@@ -35,7 +35,7 @@ function weatherData(){
       input.value ="";
     })
     
-    .catch(err => console.log("Wrong city name!"));
+    .catch(err => alert("Wrong city name!"));
     }
 
     function timeTransform(unix_time) {
@@ -215,7 +215,7 @@ function weatherData(){
         "UG": "Uganda",   
         "UA": "Ukraine",   
         "AE": "United Arab Emirates",   
-        "GB": "United Kiongdom",   
+        "GB": "United Kingdom",   
         "US": "United States of America",   
         "UY": "Uruguay",   
         "UZ": "Uzbekistan",   
