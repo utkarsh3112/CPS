@@ -4,7 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -59,8 +58,12 @@
       <hr><div id="svgMap"></div></div></div>
     
     <div id="m2" class="container my-3">
-      <h3>Top News <span class="badge bg-secondary">By Weather For You</span></h3>
+      <div id="box">
+        <h3>Top News <span class="badge bg-secondary">By Weather For You</span></h3>
+        <div id="checking"></div>
+      </div>
       <hr>
+      
       <div class="accordion" id="newsAccordion">
         
       </div>
@@ -69,7 +72,11 @@
   
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <!-- for local we can use -->
+    <!-- <script src="extra.js"></script> -->
+    <!-- for online deploy -->
     <script src="spa.js"></script>
+
     <script src="main.js"></script>
     <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
@@ -77,27 +84,20 @@
     
     <script>
       $(document).ready(function(){
-        // Add smooth scrolling to all links
+
         $("a").on('click', function(event) {
       
-          // Make sure this.hash has a value before overriding default behavior
           if (this.hash !== "") {
-            // Prevent default anchor click behavior
             event.preventDefault();
       
-            // Store hash
             var hash = this.hash;
       
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
             $('html, body').animate({
               scrollTop: $(hash).offset().top
             }, 800, function(){
-         
-              // Add hash (#) to URL when done scrolling (default click behavior)
               window.location.hash = hash;
             });
-          } // End if
+          } 
         });
       });
       </script>
