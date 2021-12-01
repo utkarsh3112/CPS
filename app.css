@@ -9,6 +9,16 @@
     display: flex;
     justify-content: space-between;
   }
+  #ddl{
+    padding: 10px;
+    margin-bottom: 0.5rem;
+    border-radius: 7px;
+    border-width: 2px;
+  }
+  #box{
+    display:flex;
+    justify-content: space-between;
+  }
   .text-container{
     width: 50%;
     padding: 0.2rem;
@@ -52,13 +62,6 @@
     margin: 50px auto;
   }
   
-  
-  .close{
-    float: right;
-    margin-top: -2px;
-    cursor: pointer;
-    margin-right: 20px;
-  }
   
   .card h1{
     padding: 5px 0;
